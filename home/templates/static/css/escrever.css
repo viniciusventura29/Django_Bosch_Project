@@ -1,0 +1,35 @@
+.text{
+    width: 100vw;
+    height: 100vh;
+    padding: 150px 100px 100px 100px;
+    box-sizing: border-box;
+}
+
+.title input{
+    width: 100%;
+    height: 30px;
+    border: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.541);
+    font-size: 30px;
+    padding: 0 5px 2px 5px;
+    letter-spacing: 3px;
+}
+
+.title input:focus{
+    outline: 0;
+}
+
+#body{
+    margin-top: 100px;
+    width: 100%;
+    border:none;
+    resize: none;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    line-height: 25px;
+    overflow: hidden;
+}
+
+#body:focus{
+    outline: none;
+}

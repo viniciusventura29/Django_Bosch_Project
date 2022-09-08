@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/escrever.css' %}">
+
+
+
+<body>
+    {% include 'moldes/nav.html'%}
+
+    <div class="text">
+    <div class="title">
+        <input placeholder="Title..." type="text">
+        <textarea name="body" id="body" onkeydown="autoResize()" placeholder="Start writing here..." cols="30" rows="10"></textarea>
+    </div>
+</div>
+    {% include 'moldes/footer.html'%}
+
+    <script src="{% static 'js/escrever.js' %}"></script>
+</body>
+</html>
+
+
+{% endblock %}
