@@ -18,4 +18,20 @@
 
 .hero{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.singleCardHome{
+    background-color: rgb(228, 228, 228);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cardsHome{
+    display: grid;
+    grid-template-columns: 100px repeat(1,0fr);
+    grid-template-rows: 200px auto;
+    gap: 20px;
 }
