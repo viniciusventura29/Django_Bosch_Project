@@ -1,42 +1,29 @@
+{% extends 'base.html' %}
 {% load static %}
+{% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/global.css' %}">
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    
-    <title>NotionS2</title>
-</head>
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
 
 <body>
-    <nav class="nav">
-        <h1>LOGOTIPO</h1>
-        <ul>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Escrever</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Cadastro</a></li>
-        </ul>
-    </nav>
+    {% include 'moldes/nav.html'%}
 
     <div class="hero">
         <div>
             <h2>One workspace.Every team.</h2>
-            <p>W're more than a doc. Or a table. Customize Notion to work the way you do.</p>
+            <p>W're more than a doc. Or a table. Customize Notion to work the way you do.
+                W're more than a doc. Or a table. Customize Notion to work the way you do.
+                W're more than a doc. Or a table. Customize Notion to work the way you do.
+            </p>
             <button>Start to write</button>
         </div>
 
-        <div>
+        <div class="imageHome">
             <img src="{% static 'img/Humaaans - 3 Characters.png' %}" alt="">
         </div>
      
     </div>
 
-    <div>
+    <div class="container">
     <h2>Trending</h2>
     <div class="cardsHome">
         
@@ -61,8 +48,32 @@
             <p>Text Tilte</p>
             <p>Date  Theme-Topic</p>
         </div>
+        <div class="singleCardHome">
+            <p>Author name</p>
+            <p>Text Tilte</p>
+            <p>Date  Theme-Topic</p>
+        </div>
+        <div class="singleCardHome">
+            <p>Author name</p>
+            <p>Text Tilte</p>
+            <p>Date  Theme-Topic</p>
+        </div>
+        <div class="singleCardHome">
+            <p>Author name</p>
+            <p>Text Tilte</p>
+            <p>Date  Theme-Topic</p>
+        </div>
+        <div class="singleCardHome">
+            <p>Author name</p>
+            <p>Text Tilte</p>
+            <p>Date  Theme-Topic</p>
+        </div>
     </div>
 
     </div>
+
+    {% include 'moldes/footer.html'%}
 </body>
 </html>
+
+{% endblock %}

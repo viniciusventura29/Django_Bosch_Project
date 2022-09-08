@@ -1,0 +1,30 @@
+.nav{
+    background-color: #fafafa;
+    display: flex;
+    padding: 30px 60px 30px 60px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+    width: 400px;
+    justify-content: space-between;
+}
+
+
+.nav a{
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav a:hover{
+    border-radius: 5px;
+    background: #e2e2e2;
+    
+}
