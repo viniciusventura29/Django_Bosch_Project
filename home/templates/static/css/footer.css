@@ -1,5 +1,6 @@
 .site-footer
 {
+  position: relative;
   background-color:#26272b;
   padding:45px 0px 20px;
   font-size:15px;

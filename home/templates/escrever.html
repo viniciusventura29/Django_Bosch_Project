@@ -9,12 +9,20 @@
 <body>
     {% include 'moldes/nav.html'%}
 
+<form action='' method="post">
+    {% csrf_token %}
     <div class="text">
-    <div class="title">
-        <input placeholder="Title..." type="text">
-        <textarea name="body" id="body" onkeydown="autoResize()" placeholder="Start writing here..." cols="30" rows="10"></textarea>
+        <div class="title">
+            <input placeholder="Title..." name="textTitle" type="text">
+        </div>
+        <textarea name="textBody" id="textBody" onkeydown="autoResize()" placeholder="Start writing here..." cols="30" rows="10"></textarea>
+        <button type='submit' class="btn_enviar_text">Finalizar</button>
     </div>
-</div>
+
+    <input type="text" placeholder="Categoria..." name="TextCategoria">
+
+</form>
+
     {% include 'moldes/footer.html'%}
 
     <script src="{% static 'js/escrever.js' %}"></script>
