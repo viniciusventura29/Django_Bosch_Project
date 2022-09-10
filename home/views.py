@@ -27,3 +27,6 @@ def escrever(request):
     
     else:
         return render(request, "escrever.html")
+
+def cadastrar_user(request):
+    return render(request,"cadastro.html")

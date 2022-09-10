@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     
-    <title>NotionS2</title>
+    <title>{% block title %} {% endblock%}</title>
 </head>
 
 {% block content %}

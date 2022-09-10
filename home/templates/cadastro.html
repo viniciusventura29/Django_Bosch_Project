@@ -1,0 +1,77 @@
+{% extends 'moldes/base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
+
+<title>{% block title %} Cadastro {% endblock%}</title>
+
+<div class="cadastro_screen">
+    <div class="img_side">
+        <div class="theory_img"><h1>AQUI VAI UMA IMG</h1></div>
+        
+    </div>
+
+    <div class="cadastro_form_general">
+      <h1>Create an Account</h1>
+        <form method="post" action="">
+            {% csrf_token %}
+            <div class="cadastro_form_inputs">
+              <label for="exampleInputText1" class="form-label">Nome Completo</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputText1"
+                aria-describedby="textHelp"
+                name="Name"
+                placeholder="ex: João Lima da Silva..."
+              />
+            <div class="cadastro_form_inputs">
+              <label for="exampleInputText1" class="form-label">Nome de Usuário</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputText1"
+                aria-describedby="textHelp"
+                name="Nickname"
+                placeholder="ex: João_Lima123"
+              />
+              <div class="cadastro_form_inputs">
+                <label for="exampleInputText1" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputText1"
+                  aria-describedby="textHelp"
+                  name="Email"
+                  placeholder="ex: joao.lima@gmail.com..."
+                />
+            </div>
+            <div class="cadastro_form_inputs">
+              <label for="exampleInputPassword1" class="form-label">Senha</label>
+              <input
+                type="password"
+                class="form-control"
+                name="First_password"
+                id="exampleInputPassword1"
+                placeholder="********"
+                
+              />
+          
+              <div class="cadastro_form_inputs">
+                <label for="exampleInputPassword1" class="form-label">Confirmação de senha</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  name="Second_password"
+                  id="exampleInputPassword1"
+                  placeholder="********"
+                />
+            </div>
+            <button type="submit" class="btn">Cadastrar</button>
+            
+          </form>
+    </div>
+</div>
+
+{% endblock %}
