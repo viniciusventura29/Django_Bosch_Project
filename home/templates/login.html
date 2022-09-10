@@ -1,0 +1,52 @@
+{% extends 'moldes/base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+<title>{% block title %} Login {% endblock%}</title>
+
+<div class="login_screen">
+
+    <div class="login_form_general">
+      <h1>Enter in your Account</h1>
+        <form method="post" action="">
+            {% csrf_token %}
+              <div class="login_form_inputs">
+                <label for="exampleInputText1" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputText1"
+                  aria-describedby="textHelp"
+                  name="Email"
+                  placeholder="ex: joao.lima@gmail.com..."
+                />
+            </div>
+            <div class="login_form_inputs">
+              <label for="exampleInputPassword1" class="form-label">Senha</label>
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                id="exampleInputPassword1"
+                placeholder="********"
+                
+              />
+        
+            </div>
+            
+            <button type="submit" class="btn">Entrar</button>
+          </form>
+          
+          <a class="link_cadastro" href="{% url 'cadastrar' %}">Ainda não possui uma conta?<span> Crie uma já!</span></a>
+    </div>
+  
+    <div class="img_side">
+      <div class="logotipo"><h2>LOGOTIPO</h2></div>
+      <div class="theory_img"><h1>AQUI VAI UMA IMG</h1></div>
+      
+  </div>
+</div>
+
+{% endblock %}

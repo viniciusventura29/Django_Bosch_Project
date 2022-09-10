@@ -1,4 +1,4 @@
-.cadastro_screen{
+.login_screen{
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -14,7 +14,7 @@
     background-color: bisque;
 }
 
-.cadastro_form_general{
+.login_form_general{
     display: flex;
     align-items: center;
     width: 60%;
@@ -23,18 +23,18 @@
     justify-content: center;
 }
 
-.cadastro_form_general h1{
+.login_form_general h1{
     margin-bottom: 60px;
 }
 
-.cadastro_form_inputs{
+.login_form_inputs{
     display: flex;
     flex-direction: column;
     
 
 }
 
-.cadastro_form_inputs input{
+.login_form_inputs input{
     width: 400px;
     height: 40px;
     border: none;
@@ -46,7 +46,7 @@
 }
 
 
-.cadastro_form_inputs input:focus{
+.login_form_inputs input:focus{
     outline: none;
 }
 
@@ -66,17 +66,17 @@
     background: rgb(7, 138, 51);
 }
 
-.link_login{
+.link_cadastro{
     margin-top:40px ;
     text-decoration: none;
     color: rgb(44, 44, 44);
 }
 
-.link_login span{
+.link_cadastro span{
     font-weight: bold;
 }
 
-.link_login:hover{
+.link_cadastro:hover{
     color: #000000;
 }
 
@@ -85,6 +85,6 @@
     background: #fff;
     padding: 20px;
     width: 20%;
-    left: 0;
+    right: 0;
     bottom: 80px;
 }

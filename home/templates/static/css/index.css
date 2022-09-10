@@ -7,6 +7,15 @@
     height: 100vh;
 }
 
+.textHero{
+    width: 40%;
+}
+
+.textHero h2{
+    font-size: x-large;
+    margin-bottom: 50px;
+}
+
 .singleCardHome{
     background-color: rgb(228, 228, 228);
     padding: 25px;
