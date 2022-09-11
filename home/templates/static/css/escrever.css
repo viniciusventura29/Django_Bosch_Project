@@ -48,3 +48,20 @@
 .btn_enviar_text:hover{
     background-color: rgb(0, 126, 63);
 }
+
+.btnEnviar_and_categoria{
+    display: flex;
+    flex-direction: column;
+}
+
+.categoria{
+    color: #dddddd;
+    width: 15%;
+    height: 20px;
+    padding: 10px;
+}
+
+.categoria:focus{
+    outline: none;
+}
+
