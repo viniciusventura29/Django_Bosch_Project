@@ -1,6 +1,7 @@
 from statistics import mode
 from tkinter import CASCADE
 from django.db import models
+from django.contrib.auth.models import User
 
 class UsuarioModel(models.Model):
     nome = models.CharField(max_length=25)
@@ -11,7 +12,7 @@ class UsuarioModel(models.Model):
     
     
 class TextModel(models.Model):
-    user_id = models.ForeignKey(UsuarioModel,on_delete=models.PROTECT)
+    user_id = models.ForeignKey(User,on_delete=models.PROTECT)
     title = models.CharField(max_length=25)
     body = models.TextField()
     rate = models.IntegerField()

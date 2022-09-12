@@ -3,32 +3,10 @@ from django.core.validators import validate_email
 from home.models import TextModel, UsuarioModel
 from django.contrib.auth.models import User
 from django.contrib import messages, auth
-from django.contrib.auth import authenticate
+from django.http import HttpResponse
 
 def index(request):
     return render(request, "index.html")
-
-def escrever(request):
-    if str(request.method) == 'POST':
-        
-        title = request.POST.get('textTitle')
-        body = request.POST.get('textBody')
-        categoria = request.POST.get('TextCategoria')
-
-        texto = TextModel.objects.create(
-            title = title,
-            body = body,
-            categoria = categoria,
-        )
-    
-        texto.save()
-        messages.success(request,"salvo com sucesso!")   
-     
-     
-        return render(request, "escrever.html")
-    
-    else:
-        return render(request, "escrever.html")
 
 def cadastrar_user(request):
     if str(request.method) == 'POST':
@@ -46,8 +24,8 @@ def cadastrar_user(request):
         return render(request, 'cadastro.html')
 
     if len(first_password)<6:
-            messages.error(request, 'Senha deve ter no mínimo 6 digitos')
-            return render(request, 'cadastro.html')
+        messages.error(request, 'Senha deve ter no mínimo 6 digitos')
+        return render(request, 'cadastro.html')
 
     if second_password!=first_password:
         messages.error(request, 'Senhas diferentes! Tente novamente')
@@ -77,11 +55,11 @@ def logar_user(request):
         return render(request, 'login.html')
 
     else:
-        email = request.POST.get('email')
+        username = request.POST.get('username')
         senha = request.POST.get('password')
 
         user_login = auth.authenticate(
-            email=email,
+            username=username,
             password=senha,
         )
 
@@ -92,3 +70,29 @@ def logar_user(request):
         else:
             messages.warning(request,"Usuário não cadastrado!")
             return render(request, 'login.html')
+
+def escrever(request):
+    if request.user.is_authenticated:
+
+        if str(request.method) == 'POST':
+            title = request.POST.get('textTitle')
+            body = request.POST.get('textBody')
+            categoria = request.POST.get('TextCategoria')
+
+            texto = TextModel.objects.create(
+                title = title,
+                body = body,
+                categoria = categoria,
+            )
+        
+            texto.save()
+            messages.success(request,"salvo com sucesso!")   
+        
+        
+            return render(request, "escrever.html")
+        
+        else:
+            return render(request, "escrever.html")
+
+    txt = """<script">alert('You have no properties to view...');window.location='/logar/';</script>"""
+    return HttpResponse(txt)

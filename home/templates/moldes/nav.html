@@ -5,5 +5,6 @@
         <li><a href="{% url 'escrever' %}">Escrever</a></li>
         <li><a href="{% url 'logar' %}">Login</a></li>
         <li><a href="{% url 'cadastrar' %}">Cadastro</a></li>
+        <li>{{request.user.id}}</li>
     </ul>
 </nav>

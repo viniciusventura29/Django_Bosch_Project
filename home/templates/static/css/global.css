@@ -8,3 +8,19 @@
     margin-left: 120px;
     margin-right: 120px;
 }
+
+.btn{
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    letter-spacing: 1px;
+    background: rgb(8, 168, 61);
+    color: white;
+    width: 20%;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: rgb(7, 138, 51);
+}
