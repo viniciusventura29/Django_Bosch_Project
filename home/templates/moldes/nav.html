@@ -3,8 +3,14 @@
     <ul>
         <li><a href="#">Sobre</a></li>
         <li><a href="{% url 'escrever' %}">Escrever</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'sair' %}">Sair</a></li>
+        <li>{{request.user.id}}</li>
+        {% else %}
         <li><a href="{% url 'logar' %}">Login</a></li>
         <li><a href="{% url 'cadastrar' %}">Cadastro</a></li>
-        <li>{{request.user.id}}</li>
+        {% endif %}
+
+
     </ul>
 </nav>

@@ -15,7 +15,7 @@ class TextModel(models.Model):
     user_id = models.ForeignKey(User,on_delete=models.PROTECT)
     title = models.CharField(max_length=25)
     body = models.TextField()
-    rate = models.IntegerField()
+    rate = models.IntegerField(default=0)
     categoria = models.CharField(max_length=25)
     
     

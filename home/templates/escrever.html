@@ -9,8 +9,28 @@
 <body>
     {% include 'moldes/nav.html'%}
 
+
+{% if user.is_authenticated %}
 <form action='' method="post">
     {% csrf_token %}
+    <div class="text">
+        <div class="title">
+            <input placeholder="Title..." name="textTitle" type="text">
+        </div>
+        <textarea name="textBody" id="textBody" onkeydown="autoResize()" placeholder="Start writing here..." cols="30" rows="10"></textarea>
+        <div class="btnEnviar_and_categoria">
+            <input type="text" class="categoria" placeholder="Categoria..." name="TextCategoria">
+            <button type='submit' class="btn">Finalizar</button>
+        </div>
+    </div>
+
+    
+
+</form>
+
+{% else %}
+<form action='' method="post">
+
     <div class="text">
         <div class="title">
             <input placeholder="Title..." name="textTitle" type="text">
@@ -22,10 +42,13 @@
         </div>
     </div>
 
-    
+<div id="abrirModal" class="modal">
+    <a href="{% url 'index' %}" title="Fechar" class="fechar">x</a>
+    <h1>Você não tem permissão para entrar aqui!</h1>
+    <p>Você Precisar logar em um usuário para começar a escrever.</p>
+</div>
 
-</form>
-
+{% endif %}
     {% include 'moldes/footer.html'%}
 
     <script src="{% static 'js/escrever.js' %}"></script>

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.validators import validate_email
 from home.models import TextModel, UsuarioModel
 from django.contrib.auth.models import User
@@ -70,29 +70,29 @@ def logar_user(request):
         else:
             messages.warning(request,"Usuário não cadastrado!")
             return render(request, 'login.html')
+        
+def sair_user(request):
+    auth.logout(request)
+    return redirect('index')
+        
 
 def escrever(request):
-    if request.user.is_authenticated:
+    if str(request.method) == 'POST':
+        title = request.POST.get('textTitle')
+        body = request.POST.get('textBody')
+        categoria = request.POST.get('TextCategoria')
 
-        if str(request.method) == 'POST':
-            title = request.POST.get('textTitle')
-            body = request.POST.get('textBody')
-            categoria = request.POST.get('TextCategoria')
-
-            texto = TextModel.objects.create(
-                title = title,
-                body = body,
-                categoria = categoria,
-            )
-        
-            texto.save()
-            messages.success(request,"salvo com sucesso!")   
-        
-        
-            return render(request, "escrever.html")
-        
-        else:
-            return render(request, "escrever.html")
-
-    txt = """<script">alert('You have no properties to view...');window.location='/logar/';</script>"""
-    return HttpResponse(txt)
+        texto = TextModel.objects.create(
+            title = title,
+            body = body,
+            categoria = categoria,
+        )
+    
+        texto.save()
+        messages.success(request,"salvo com sucesso!")   
+    
+    
+        return render(request, "escrever.html")
+    
+    else:
+        return render(request, "escrever.html")
