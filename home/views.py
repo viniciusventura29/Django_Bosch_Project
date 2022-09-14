@@ -65,7 +65,7 @@ def logar_user(request):
 
         if user_login:
             auth.login(request,user_login)
-            return render(request, 'escrever.html')
+            return redirect('escrever')
 
         else:
             messages.warning(request,"Usuário não cadastrado!")
@@ -86,6 +86,7 @@ def escrever(request):
             title = title,
             body = body,
             categoria = categoria,
+            user_id = request.user,
         )
     
         texto.save()
