@@ -25,10 +25,9 @@
     letter-spacing: 1px;
 }
 
-.nav a:hover{
+.nav .opcao_nav:hover{
     border-radius: 5px;
     background: #e2e2e2;
-    
 }
 
 .userPerfil{
@@ -42,12 +41,15 @@
 }
 
 .userPerfil_opcoes{
-    display: block;
+    display: flex;
     flex-direction: column;
     background-color: #c2c2c2;
     height: fit-content;
     width: 200px;
     list-style: none;
+    margin-top: 60px;
+    border-radius:  0 0 10px 10px;
+    visibility: hidden;
 }
 
 .userPerfil_opcoes li{
@@ -55,4 +57,15 @@
     width: 100px;
     display: flex;
     justify-content: center;
+
+}
+
+
+.opcao_userPerfil_individual:hover{
+    background-color: #e2e2e2;
+    border-radius:  0 0 10px 10px;
+}
+
+.nav_opcoes.active .userPerfil_opcoes{
+    visibility: visible;
 }
