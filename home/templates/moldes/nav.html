@@ -1,11 +1,18 @@
 <nav class="nav">
     <a href="{% url 'index' %}"><h1>LOGOTIPO</h1></a>
-    <ul>
+    <ul class="nav_opcoes">
         <li><a href="#">Sobre</a></li>
         <li><a href="{% url 'escrever' %}">Escrever</a></li>
         {% if user.is_authenticated %}
         <li><a href="{% url 'sair' %}">Sair</a></li>
-        <li>{{request.user.pk}}</li>
+        <li>
+            <div class="userPerfil">
+                <ul class="userPerfil_opcoes">
+                    <li>Meu Perfil</li>
+                    <li><a href="{% url 'sair' %}">Sair</a></li>
+                </ul>
+            </div>
+        </li>
         {% else %}
         <li><a href="{% url 'logar' %}">Login</a></li>
         <li><a href="{% url 'cadastrar' %}">Cadastro</a></li>

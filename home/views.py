@@ -38,6 +38,8 @@ def cadastrar_user(request):
     if User.objects.filter(email=email).exists():
         messages.error(request, 'Email ja cadastrado! Tente novamente')
         return render(request, 'cadastro.html')
+    
+    
 
     novo_usuario = User.objects.create_user(
         username=nickname,
@@ -45,7 +47,9 @@ def cadastrar_user(request):
         email=email,
         password=first_password
         )
-
+    
+    novo_usuario.is_staff = True
+    
     novo_usuario.save()
 
     return render(request,"cadastro.html")
@@ -62,7 +66,7 @@ def logar_user(request):
             username=username,
             password=senha,
         )
-
+    #AAAA EU SOU O VINE DO VRAU HEHEHHEHEHE 
         if user_login:
             auth.login(request,user_login)
             return redirect('escrever')
@@ -81,7 +85,7 @@ def escrever(request):
         title = request.POST.get('textTitle')
         body = request.POST.get('textBody')
         categoria = request.POST.get('TextCategoria')
-
+#SÓ VAPO VAPO DO MALVADAO OOHHHOOHHH
         texto = TextModel.objects.create(
             title = title,
             body = body,

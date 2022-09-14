@@ -9,11 +9,12 @@
     box-sizing: border-box;
 }
 
-.nav ul{
+.nav .nav_opcoes{
     display: flex;
     list-style: none;
     width: 400px;
     justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -28,4 +29,30 @@
     border-radius: 5px;
     background: #e2e2e2;
     
+}
+
+.userPerfil{
+    background-color: aqua;
+    border-radius: 100%;
+    width:  40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.userPerfil_opcoes{
+    display: block;
+    flex-direction: column;
+    background-color: #c2c2c2;
+    height: fit-content;
+    width: 200px;
+    list-style: none;
+}
+
+.userPerfil_opcoes li{
+    padding: 20px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
 }

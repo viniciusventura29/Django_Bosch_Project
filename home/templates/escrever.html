@@ -19,17 +19,14 @@
         </div>
         <textarea name="textBody" id="textBody" onkeydown="autoResize()" placeholder="Start writing here..." cols="30" rows="10"></textarea>
         <div class="btnEnviar_and_categoria">
-            <input type="text" class="categoria" placeholder="Categoria..." name="TextCategoria">
-            
+            <input type="text" class="categoria" placeholder="Categoria..." name="TextCategoria">      
         </div>
         <button type='submit' class="btn">Finalizar</button>
     </div>
-
-    
-
 </form>
 
 {% else %}
+<div class="blur">
 <form action='' method="post">
 
     <div class="text">
@@ -39,14 +36,16 @@
         <textarea name="textBody" id="textBody" onkeydown="autoResize()" placeholder="Start writing here..." cols="30" rows="10"></textarea>
         <div class="btnEnviar_and_categoria">
             <input type="text" class="categoria" placeholder="Categoria..." name="TextCategoria">
-            <button type='submit' class="btn_enviar_text">Finalizar</button>
         </div>
+    </form>
+        <button type='submit' class="btn_enviar_text">Finalizar</button>
     </div>
-
+</div>
 <div id="abrirModal" class="modal">
     <a href="{% url 'index' %}" title="Fechar" class="fechar">x</a>
     <h1>Você não tem permissão para entrar aqui!</h1>
     <p>Você Precisar logar em um usuário para começar a escrever.</p>
+    <a href="{% url 'logar' %}"><button class="btn">Logar</button></a>
 </div>
 
 {% endif %}
