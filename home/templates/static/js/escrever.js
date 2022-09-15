@@ -6,5 +6,6 @@ function autoResize()
     {
         console.log(altura);
         objTextArea.rows += 1;
+        console.log("teste")
     }
 }

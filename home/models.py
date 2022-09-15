@@ -18,7 +18,6 @@ class TextModel(models.Model):
     rate = models.IntegerField(default=0)
     categoria = models.CharField(max_length=25)
     
-    
 class ComentarioModel(models.Model):
     user_id = models.ForeignKey(UsuarioModel,on_delete=models.PROTECT)
     text_id = models.ForeignKey(TextModel,on_delete=models.PROTECT)

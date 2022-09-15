@@ -6,7 +6,13 @@ from django.contrib import messages, auth
 from django.http import HttpResponse
 
 def index(request):
-    return render(request, "index.html")
+    textos = TextModel.objects.all()
+
+    dados = {
+        'textos':textos,
+    }
+
+    return render(request, "index.html",dados)
 
 def cadastrar_user(request):
     if str(request.method) == 'POST':

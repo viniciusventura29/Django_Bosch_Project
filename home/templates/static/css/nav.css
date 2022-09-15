@@ -66,6 +66,6 @@
     border-radius:  0 0 10px 10px;
 }
 
-.nav_opcoes.active .userPerfil_opcoes{
+.active{
     visibility: visible;
 }

@@ -1,3 +1,5 @@
+{% load static %}
+
 <nav class="nav">
     <a href="{% url 'index' %}"><h1>LOGOTIPO</h1></a>
     <ul id="nav_opcoes" class="nav_opcoes">
@@ -6,7 +8,7 @@
         {% if user.is_authenticated %}
         <li><a href="{% url 'sair' %}">Sair</a></li>
         <li>
-            <div id="userPerfil" class="userPerfil">
+            <div  class="userPerfil">
                 <ul class="userPerfil_opcoes">
                     <li class="opcao_userPerfil_individual">Meu Perfil</li>
                     <li class="opcao_userPerfil_individual"><a href="{% url 'sair' %}">Sair</a></li>
@@ -20,6 +22,7 @@
         {% endif %}
 
 
-    </ul>
-
+    </ul>    
 </nav>
+
+<script src="{% static 'js/escrever.js' %}"></script>

@@ -29,47 +29,13 @@
     <h2>Trending</h2>
     <div class="cardsHome">
         
-
+        {% for texto in textos %}
         <div class="singleCardHome">
-            <p>Author name</p>
-            <p>Text Tilte</p>
-            <p>Date  Theme-Topic</p>
+            <p>{{texto.user_id}}</p>
+            <p>{{texto.title}}</p>
+            <p>Date  {{texto.categoria}}</p>
         </div>
-        <div class="singleCardHome">
-            <p>Author name</p>
-            <p>Text Tilte</p>
-            <p>Date  Theme-Topic</p>
-        </div>
-        <div class="singleCardHome">
-            <p>Author name</p>
-            <p>Text Tilte</p>
-            <p>Date  Theme-Topic</p>
-        </div>
-        <div class="singleCardHome">
-            <p>Author name</p>
-            <p>Text Tilte</p>
-            <p>Date  Theme-Topic</p>
-        </div>
-        <div class="singleCardHome">
-            <p>Author name</p>
-            <p>Text Tilte</p>
-            <p>Date  Theme-Topic</p>
-        </div>
-        <div class="singleCardHome">
-            <p>Author name</p>
-            <p>Text Tilte</p>
-            <p>Date  Theme-Topic</p>
-        </div>
-        <div class="singleCardHome">
-            <p>Author name</p>
-            <p>Text Tilte</p>
-            <p>Date  Theme-Topic</p>
-        </div>
-        <div class="singleCardHome">
-            <p>Author name</p>
-            <p>Text Tilte</p>
-            <p>Date  Theme-Topic</p>
-        </div>
+        {% endfor %}
     </div>
 
     </div>
