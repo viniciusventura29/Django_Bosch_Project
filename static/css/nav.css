@@ -1,0 +1,71 @@
+.nav{
+    background-color: #fafafa;
+    display: flex;
+    padding: 15px 60px 15px 60px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.nav .nav_opcoes{
+    display: flex;
+    list-style: none;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav a{
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    letter-spacing: 1px;
+}
+
+.nav .opcao_nav:hover{
+    border-radius: 5px;
+    background: #e2e2e2;
+}
+
+.userPerfil{
+    background-color: aqua;
+    border-radius: 100%;
+    width:  40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.userPerfil_opcoes{
+    display: flex;
+    flex-direction: column;
+    background-color: #c2c2c2;
+    height: fit-content;
+    width: 200px;
+    list-style: none;
+    margin-top: 60px;
+    border-radius:  0 0 10px 10px;
+    visibility: hidden;
+}
+
+.userPerfil_opcoes li{
+    padding: 20px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.opcao_userPerfil_individual:hover{
+    background-color: #e2e2e2;
+    border-radius:  0 0 10px 10px;
+}
+
+.active{
+    visibility: visible;
+}

@@ -11,7 +11,7 @@
 
     <div class="hero">
         <div class="textHero">
-            <h2>One workspace.Every team.</h2>
+            <h2 class="title">Workspace on Every Team.</h2>
             <p>W're more than a doc. Or a table. Customize Notion to work the way you do.
                 W're more than a doc. Or a table. Customize Notion to work the way you do.
                 W're more than a doc. Or a table. Customize Notion to work the way you do.
@@ -20,21 +20,21 @@
             </div>
 
         <div class="imageHome">
-            <img src="{% static 'img/Humaaans - 3 Characters.png' %}" alt="">
+            <img src="{% static 'img/HumaaansHero.png' %}" alt="">
         </div>
      
     </div> 
 
     <div class="container">
-    <h2>Trending</h2>
+    <h2 class="title">Trending</h2>
     <div class="cardsHome">
         
         {% for texto in textos %}
-        <div class="singleCardHome">
-            <p>{{texto.user_id}}</p>
-            <p>{{texto.title}}</p>
-            <p>Date  {{texto.categoria}}</p>
-        </div>
+        <a href="{% url 'texto' %}"><div class="singleCardHome">
+            <p class="card_author">{{texto.user_id}}</p>
+            <p class="card_title">{{texto.title}}</p>
+            <p class="card_date_categoria">{{texto.data}}</p>
+        </div></a>
         {% endfor %}
     </div>
 

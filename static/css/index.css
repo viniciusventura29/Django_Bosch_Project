@@ -1,0 +1,73 @@
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+    height: 100vh;
+}
+
+.textHero{
+    width: 40%;
+}
+
+.textHero h2{
+    font-size: x-large;
+    margin-bottom: 50px;
+}
+
+.singleCardHome{
+    background-color: rgb(228, 228, 228);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.cardsHome{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    gap: 20px;
+}
+
+.card_author{
+    font-size: 5px;
+}
+
+.card_title{
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.card_date_categoria{
+    color: #989898;
+    font-style: italic;
+}
+
+.imageHome img{
+    width: 30vw;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:80px;
+	right:70px;
+	background-color:rgb(8, 168, 61);
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #000;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.float img{
+    width: 35%;
+}
+
+.my-float{
+	margin-top:22px;
+}

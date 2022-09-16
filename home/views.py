@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.core.validators import validate_email
-from home.models import TextModel, UsuarioModel
+from home.models import TextModel
 from django.contrib.auth.models import User
 from django.contrib import messages, auth
 from django.http import HttpResponse
@@ -107,3 +107,6 @@ def escrever(request):
     
     else:
         return render(request, "escrever.html")
+    
+def texto(request):
+    return render(request, "texto.html")
