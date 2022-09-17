@@ -8,7 +8,7 @@
         {% if user.is_authenticated %}
         <li><a href="{% url 'sair' %}">Sair</a></li>
         <li>
-            <div  class="userPerfil">
+            <div  class="userPerfil" id="userPerfil">
                 <ul class="userPerfil_opcoes">
                     <li class="opcao_userPerfil_individual">Meu Perfil</li>
                     <li class="opcao_userPerfil_individual"><a href="{% url 'sair' %}">Sair</a></li>
@@ -25,4 +25,4 @@
     </ul>    
 </nav>
 
-<script src="{% static 'js/escrever.js' %}"></script>
+<script src="{% static 'js/nav.js' %}"></script>
