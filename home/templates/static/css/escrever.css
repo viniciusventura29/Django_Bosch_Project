@@ -70,8 +70,11 @@
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
     color: #f2f2f2;
-    padding: 50px;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
 .modal h1{

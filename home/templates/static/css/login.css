@@ -11,7 +11,10 @@
 .theory_img{
     width: 100%;
     height: 100%;
-    background-color: bisque;
+    display: flex;
+    flex-direction: row-reverse;
+    z-index: -20;
+    justify-content: flex-start;
 }
 
 .theory_img img{

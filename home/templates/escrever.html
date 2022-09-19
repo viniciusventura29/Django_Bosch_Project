@@ -44,7 +44,9 @@
 <div id="abrirModal" class="modal">
     <a href="{% url 'index' %}" title="Fechar" class="fechar">x</a>
     <h1>Você não tem permissão para entrar aqui!</h1>
-    <p>Você Precisar logar em um usuário para começar a escrever.</p>
+    <img src="{% static 'img/access_denied.png' %}" alt="">
+    <p>Você Precisa fazer o login para prosseguir a partir daqui!</p>
+    <p>Entre com um usuário para começar a escrever.</p>
     <a href="{% url 'logar' %}"><button class="btn">Logar</button></a>
 </div>
 
