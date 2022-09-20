@@ -3,12 +3,13 @@
 
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/texto.css' %}">
+<link rel="stylesheet" href="https://fonts.google.com/specimen/Playfair+Display">
 {% include "moldes/nav.html" %}
 
 <div class="text">
-<h1>{{texto.title}}</h1>
-<p>{{texto.body}}</p>
-<span>{{texto.user_id}} - {{texto.data}}</span>
+<h1 class="title">{{texto.title}}</h1>
+<p class="body">{{texto.body}}</p>
+<span class="autor_and_data">{{texto.user_id}} - {{texto.data}}</span>
 </div>
 
 {% include "moldes/footer.html" %}

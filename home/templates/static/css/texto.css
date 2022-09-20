@@ -4,4 +4,21 @@
     padding: 150px 100px 100px 100px;
     box-sizing: border-box;
     overflow: hidden;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.title{
+    font-size: 45px;
+    margin-bottom: 40px;
+}
+
+.body{
+    line-height: 25px;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.autor_and_data{
+    font-style: italic;
+    color: #616161;
 }
