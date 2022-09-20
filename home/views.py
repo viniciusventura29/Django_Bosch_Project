@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.core.validators import validate_email
 from home.models import TextModel
 from django.contrib.auth.models import User
@@ -72,7 +72,7 @@ def logar_user(request):
             username=username,
             password=senha,
         )
-    #AAAA EU SOU O VINE DO VRAU HEHEHHEHEHE 
+
         if user_login:
             auth.login(request,user_login)
             return redirect('escrever')
@@ -91,7 +91,7 @@ def escrever(request):
         title = request.POST.get('textTitle')
         body = request.POST.get('textBody')
         categoria = request.POST.get('TextCategoria')
-#SÓ VAPO VAPO DO MALVADAO OOHHHOOHHH
+
         texto = TextModel.objects.create(
             title = title,
             body = body,
@@ -108,5 +108,9 @@ def escrever(request):
     else:
         return render(request, "escrever.html")
     
-def texto(request):
-    return render(request, "texto.html")
+def texto(request,texto_id):
+    texto = get_object_or_404(TextModel, pk=texto_id)
+    texto_a_ser_exibido = {
+        'texto':texto,
+    }
+    return render(request, "texto.html",texto_a_ser_exibido)

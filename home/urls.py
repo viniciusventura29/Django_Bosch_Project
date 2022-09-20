@@ -9,5 +9,5 @@ urlpatterns=[
     path("cadastrar/", views.cadastrar_user, name='cadastrar'),
     path("logar/", views.logar_user, name='logar'),
     path("sair/", views.sair_user, name='sair'),
-    path("texto/", views.texto, name="texto")
+    path("texto/<int:texto_id>", views.texto, name="texto")
 ]

@@ -2,12 +2,14 @@
 {% load static %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/texto.css' %}">
 {% include "moldes/nav.html" %}
 
-<h1>Texto Title</h1>
-<span>data</span>
-<p>Corpo do texto</p>
-<span>autor</span>
+<div class="text">
+<h1>{{texto.title}}</h1>
+<p>{{texto.body}}</p>
+<span>{{texto.user_id}} - {{texto.data}}</span>
+</div>
 
 {% include "moldes/footer.html" %}
 {% endblock %}
