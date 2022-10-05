@@ -1,6 +1,5 @@
 .cadastro_screen{
     width: 100%;
-    height: 100vh;
     display: flex;
 }
 
@@ -11,7 +10,7 @@
 .theory_img{
     width: 100%;
     height: 100%;
-    background-color: bisque;
+    overflow:hidden
 }
 
 .theory_img img{
@@ -23,6 +22,7 @@
     display: flex;
     align-items: center;
     width: 60%;
+    padding: 40px 0 40px 0;
     flex-direction: column;    
     background: rgb(245, 245, 245);
     justify-content: center;
@@ -86,10 +86,10 @@
 }
 
 .logotipo{
-    position: absolute;
+    position: fixed;
     background: #fff;
     padding: 20px;
-    width: 20%;
+    width: 12%;
     left: 0;
     bottom: 80px;
 }

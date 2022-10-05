@@ -9,6 +9,7 @@
 
 .hero .title{
     font-size: 80px;
+    line-height: 60px;
 }
 
 .imageHome img{
@@ -19,24 +20,38 @@
     width: 40%;
 }
 
+.textHero p{
+    text-align: justify;
+    color: rgb(19, 19, 19);
+}
+
 .singleCardHome{
     background-color: rgb(228, 228, 228);
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .cardsHome{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
-    gap: 20px;
+    gap: 10px;
 }
 
 .card_author{
     font-size: 12px;
     margin-bottom: 3px;
+    margin-top: 3px;
     color: #000;
     font-style: normal;
+}
+
+.card_body{
+    text-align: justify;
+    font-size: 14px;
+    color: #000;
+    height: 65px;
+    overflow: hidden;
 }
 
 .card_title{
@@ -44,6 +59,7 @@
     font-weight: bold;
     color: #000;
     font-style: normal;
+    margin-bottom: 5px;
 }
 
 .card_date_categoria{
@@ -67,6 +83,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.float:hover{
+    background-color:rgb(6, 126, 46);
+    transition:all .2s linear
 }
 
 .float img{

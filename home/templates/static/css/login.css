@@ -15,6 +15,7 @@
     flex-direction: row-reverse;
     z-index: -20;
     justify-content: flex-start;
+    overflow: hidden;
 }
 
 .theory_img img{

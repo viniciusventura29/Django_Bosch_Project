@@ -30,9 +30,10 @@
     <div class="cardsHome">
         {% for texto in textos %}
         <a href="{% url 'texto' texto.id %}"><div class="singleCardHome">
-            <p class="card_author">{{texto.user_id}}</p>
             <p class="card_title">{{texto.title}}</p>
-            <p class="card_date_categoria">{{texto.data}}</p>
+            <p class="card_body">{{texto.body}}</p>
+            <p class="card_date_categoria">{{texto.data}} - {{texto.user_id}}</p>
+            
         </div></a>
         {% endfor %}
     </div>

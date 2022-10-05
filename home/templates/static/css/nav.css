@@ -1,5 +1,5 @@
 .nav{
-    background-color: #fafafa;
+    background-color: #fcfcfc;
     display: flex;
     padding: 15px 60px 15px 60px;
     justify-content: space-between;
@@ -27,7 +27,7 @@
 
 .nav .opcao_nav:hover{
     border-radius: 5px;
-    background: #e2e2e2;
+    background: #f6f6f6;
 }
 
 .userPerfil{
