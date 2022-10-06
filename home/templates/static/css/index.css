@@ -33,23 +33,15 @@
 
 .cardsHome{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
     gap: 10px;
-}
-
-.card_author{
-    font-size: 12px;
-    margin-bottom: 3px;
-    margin-top: 3px;
-    color: #000;
-    font-style: normal;
 }
 
 .card_body{
     text-align: justify;
     font-size: 14px;
-    color: #000;
+    color: rgb(40, 40, 40);
     height: 65px;
     overflow: hidden;
 }
@@ -65,15 +57,15 @@
 .card_date_categoria{
     color: #989898;
     font-style: italic;
-    margin-top: 10px;
-    font-size: 15px;
+    margin-top: 20px;
+    font-size: 12px;
 }
 
 .float{
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:80px;
+	bottom:60px;
 	right:70px;
 	background-color:rgb(8, 168, 61);
 	color:#FFF;

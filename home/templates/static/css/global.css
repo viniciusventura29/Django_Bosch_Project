@@ -23,4 +23,5 @@
 
 .btn:hover{
     background: rgb(7, 138, 51);
+    transition:all .2s linear
 }
